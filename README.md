@@ -1,16 +1,16 @@
 #05-07-2021
 
 ##CONTENIDO
-fifa21-env : Es el entorno virtual
-jugadores_apirest: Contiene la api para cargar y mostrar los jugadores por nombre de jugador o por nombre de equipo
-Backend.pdf: Son las instrucciones para realizar la api-rest
-Dockerfile : contiene las configuraciones necesarias para levantar el servicio de flask
-docker-compose.yml: contiene las imágenes de para el servicio de flask y el de postgresql
-req.txt: Los paquetes necesarios para la ejecución de flask con sus funcionalidades
+1. fifa21-env : Es el entorno virtual
+2. jugadores_apirest: Contiene la api para cargar y mostrar los jugadores por nombre de jugador o por nombre de equipo
+3. Backend.pdf: Son las instrucciones para realizar la api-rest
+4. Dockerfile : contiene las configuraciones necesarias para levantar el servicio de flask
+5. docker-compose.yml: contiene las imágenes de para el servicio de flask y el de postgresql
+6. req.txt: Los paquetes necesarios para la ejecución de flask con sus funcionalidades
 
 
 ##Descripción
-Esta a es una API-REST que permite:
+Esta a es una API-REST creada en python con FLASK y POSTGRESQL que permite:
 1. Almacenar en una base datos el nombre, pocisión de juego, nacionalidad y equipo de un jugador de futbol
 	-La fuente de información es https://www.easports.com/fifa/ultimate-team/api/fut/item?page=1
 	desde la página 1 hasta la 908
@@ -39,7 +39,7 @@ Esta a es una API-REST que permite:
 Ubicandose en el directorio donde se cuentra el archivo docker-compose.yml ejecutar:
 1. sudo docker-compose build
 2. sudo docker-compose up o sudo docker-compose -d
-3. Abrir el navegador
+3. Abrir el navegador e ingresar http://localhost:8080
 
 ##Ejecución de las funcionalidades de la API
 *Paso 1.* Ingresar la URL http://localhost:8080 para verificar que el servicio se encuentre activo
