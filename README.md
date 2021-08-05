@@ -42,9 +42,9 @@ Ubicandose en el directorio donde se cuentra el archivo docker-compose.yml ejecu
 3. Abrir el navegador e ingresar http://localhost:8080
 
 ##Ejecución de las funcionalidades de la API
-*Paso 1.* Ingresar la URL http://localhost:8080 para verificar que el servicio se encuentre activo
-*Paso 2.* Cargar los datos de los jugadores a la base de datos http://localhost:8080/cargarjugadores
+1. Ingresar la URL http://localhost:8080 para verificar que el servicio se encuentre activo
+2. Cargar los datos de los jugadores a la base de datos http://localhost:8080/cargarjugadores
 		-Este proceso requiere de un tiempo aproximado de 15-20 minutos para su ejecución completa
-*Paso 3.* Realizar las consultas con cualquiera de las URL de las descripciones *1* y *2* y con un orden indistinto:
+3. Realizar las consultas con cualquiera de las URL de las descripciones *1* y *2* y con un orden indistinto:
 		-Ej. http://localhost:8080/api/v1/team?name=juve&page=1
 		-Ej. http://localhost:8080/api/v1/players?search=cristi&order=asc&page=1
