@@ -1,0 +1,40 @@
+version: "3.5"
+
+services:
+    postgres-db:
+        container_name: postgresdb
+        image: postgres:13
+        restart: always
+        ports:
+            - 5432:5432
+        networks:
+            - backend
+        volumes:
+            - ./project/postgres:/appdb
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: "postgres"
+            POSTGRES_DB: Fifa2021
+            PGDATA: /appdb
+            POSTGRES_HOST_AUTH_METHOD: trust
+    application:
+        container_name: appjugadoresfifa
+        build: .
+        ports:
+            - "8080:8080"
+        networks:
+            - backend
+        volumes:
+            - .:/app
+        environment:
+            FLASK_ENV: development
+
+        depends_on:
+            - postgres-db
+        
+        
+networks:
+    backend:
+      driver: "bridge"
+
+
